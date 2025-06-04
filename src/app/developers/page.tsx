@@ -20,9 +20,9 @@ interface Developer {
   projects: number
   followers: number
   rating: number
-  githubUrl: string
-  linkedinUrl: string
-  websiteUrl: string
+  githubUrl: string | undefined
+  linkedinUrl: string | undefined
+  websiteUrl: string | undefined
   isFollowing: boolean
 }
 
