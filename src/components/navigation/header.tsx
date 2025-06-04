@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
-import { Code, Menu, X, User, Search, LogOut, Settings, Plus } from "lucide-react"
+import { Code, Menu, X, User, LogOut, Plus } from "lucide-react"
 import { useState } from "react"
 import { useAuth } from "@/contexts/auth-context"
 import { AuthModal } from "@/components/auth/auth-modal"

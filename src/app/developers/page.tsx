@@ -9,6 +9,23 @@ import { userStorage, projectStorage } from "@/lib/storage"
 import { useState, useEffect } from "react"
 import { AuthModal } from "@/components/auth/auth-modal"
 
+interface Developer {
+  id: string
+  name: string
+  title: string
+  avatar: string
+  location: string
+  bio: string
+  skills: string[]
+  projects: number
+  followers: number
+  rating: number
+  githubUrl: string
+  linkedinUrl: string
+  websiteUrl: string
+  isFollowing: boolean
+}
+
 const skillCategories = [
   "Frontend", "Backend", "Mobile", "DevOps", "Data Science", "Blockchain",
   "Game Dev", "AI/ML", "Cloud", "Security"
@@ -16,8 +33,8 @@ const skillCategories = [
 
 export default function DevelopersPage() {
   const { user } = useAuth()
-  const [developers, setDevelopers] = useState<any[]>([])
-  const [filteredDevelopers, setFilteredDevelopers] = useState<any[]>([])
+  const [developers, setDevelopers] = useState<Developer[]>([])
+  const [filteredDevelopers, setFilteredDevelopers] = useState<Developer[]>([])
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
   const [showAuthModal, setShowAuthModal] = useState(false)
@@ -147,7 +164,7 @@ export default function DevelopersPage() {
           </p>
           <Button onClick={handleJoinCommunity}>
             <UserPlus className="mr-2 h-4 w-4" />
-            {user ? 'You\'re in the Community!' : 'Join Community'}
+            {user ? 'You&apos;re in the Community!' : 'Join Community'}
           </Button>
         </div>
 

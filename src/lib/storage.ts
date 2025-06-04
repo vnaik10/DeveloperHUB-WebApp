@@ -338,7 +338,7 @@ export const clearAllData = () => {
 
 // Development helper to clear data from console
 if (typeof window !== 'undefined') {
-  (window as any).clearDeveloperHubData = clearAllData
+  (window as unknown as { clearDeveloperHubData: () => void }).clearDeveloperHubData = clearAllData
 }
 
 // Initialize data on import

@@ -65,7 +65,7 @@ export function AuthModal({ isOpen, onClose, defaultMode = 'login' }: AuthModalP
         })
       }
       onClose()
-    } catch (error) {
+    } catch {
       // Error is handled by the auth context
     }
   }

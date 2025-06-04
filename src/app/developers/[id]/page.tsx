@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+
 import {
   ArrowLeft,
   MapPin,
@@ -14,8 +14,7 @@ import {
   Github,
   Linkedin,
   Globe,
-  Star,
-  Users,
+
   Code,
   ExternalLink,
   Edit,
@@ -199,7 +198,7 @@ export default function DeveloperProfilePage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Developer Not Found</h1>
           <p className="text-muted-foreground mb-6">
-            The developer profile you're looking for doesn't exist.
+            The developer profile you&apos;re looking for doesn&apos;t exist.
           </p>
           <Button onClick={() => router.push('/developers')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -567,7 +566,7 @@ export default function DeveloperProfilePage() {
                     <Code className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                     <h3 className="text-lg font-semibold mb-2">No Projects Yet</h3>
                     <p className="text-muted-foreground mb-4">
-                      {isOwner ? "You haven't shared any projects yet." : `${developer.name} hasn't shared any projects yet.`}
+                      {isOwner ? "You haven&apos;t shared any projects yet." : `${developer.name} hasn&apos;t shared any projects yet.`}
                     </p>
                     {isOwner && (
                       <Link href="/projects/new">

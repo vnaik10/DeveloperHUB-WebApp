@@ -1,20 +1,15 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { 
-  Code, 
-  Users, 
-  Rocket, 
-  Heart, 
-  Github, 
-  Twitter, 
-  Linkedin,
-  Mail,
+import {
+  Code,
+  Users,
+  Rocket,
+  Heart,
+  Github,
   Target,
   Lightbulb,
   Globe
 } from "lucide-react"
-import Link from "next/link"
 
 const features = [
   {
@@ -46,26 +41,7 @@ const stats = [
   { label: "Countries", value: "150+" }
 ]
 
-const team = [
-  {
-    name: "Alex Johnson",
-    role: "Founder & CEO",
-    bio: "Former Google engineer passionate about building developer communities.",
-    avatar: "/api/placeholder/100/100"
-  },
-  {
-    name: "Sarah Kim",
-    role: "CTO",
-    bio: "Full-stack developer with 10+ years experience in scalable platforms.",
-    avatar: "/api/placeholder/100/100"
-  },
-  {
-    name: "Michael Chen",
-    role: "Head of Community",
-    bio: "Developer advocate focused on creating inclusive tech communities.",
-    avatar: "/api/placeholder/100/100"
-  }
-]
+
 
 export default function AboutPage() {
   return (
@@ -74,13 +50,13 @@ export default function AboutPage() {
       <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            About 
+            About
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               {" "}DeveloperHUB
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            We're building the world's largest community platform for developers to showcase their work, 
+            We&apos;re building the world&apos;s largest community platform for developers to showcase their work,
             connect with peers, and accelerate their careers through collaboration and knowledge sharing.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -101,8 +77,8 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-muted-foreground">
-              To democratize access to opportunities in tech by creating a platform where every developer, 
-              regardless of background or experience level, can showcase their skills, learn from others, 
+              To democratize access to opportunities in tech by creating a platform where every developer,
+              regardless of background or experience level, can showcase their skills, learn from others,
               and build meaningful connections that advance their careers.
             </p>
           </div>
@@ -167,7 +143,7 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-semibold mb-3">Innovation</h3>
               <p className="text-muted-foreground">
-                We encourage creative thinking and innovative solutions that push the boundaries of what's possible.
+                We encourage creative thinking and innovative solutions that push the boundaries of what&apos;s possible.
               </p>
             </div>
             <div className="text-center">

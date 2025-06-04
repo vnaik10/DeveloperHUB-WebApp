@@ -68,7 +68,7 @@ export function AddProjectModal({ isOpen, onClose, onProjectAdded }: AddProjectM
 
       onProjectAdded?.()
       onClose()
-    } catch (error) {
+    } catch {
       toast.error('Failed to add project')
     } finally {
       setLoading(false)

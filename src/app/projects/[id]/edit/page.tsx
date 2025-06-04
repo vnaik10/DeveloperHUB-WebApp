@@ -40,7 +40,7 @@ export default function EditProjectPage() {
   useEffect(() => {
     const projectId = params.id as string
     const projectData = projectStorage.getById(projectId)
-    
+
     if (!projectData) {
       router.push('/projects')
       return
@@ -129,7 +129,7 @@ export default function EditProjectPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
           <p className="text-muted-foreground mb-6">
-            The project you're trying to edit doesn't exist.
+            The project you&apos;re trying to edit doesn&apos;t exist.
           </p>
           <Button onClick={() => router.push('/projects')}>
             <ArrowLeft className="mr-2 h-4 w-4" />
@@ -145,8 +145,8 @@ export default function EditProjectPage() {
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             onClick={handleCancel}
             className="mb-4"
           >
@@ -260,16 +260,16 @@ export default function EditProjectPage() {
 
               {/* Action Buttons */}
               <div className="flex gap-4 pt-4">
-                <Button 
-                  onClick={handleSave} 
+                <Button
+                  onClick={handleSave}
                   disabled={saving}
                   className="flex-1"
                 >
                   <Save className="mr-2 h-4 w-4" />
                   {saving ? 'Saving...' : 'Save Changes'}
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   onClick={handleCancel}
                   className="flex-1"
                 >

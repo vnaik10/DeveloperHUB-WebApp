@@ -7,8 +7,24 @@ import { projectStorage } from "@/lib/storage"
 import { useState, useEffect } from "react"
 import { Badge } from "@/components/ui/badge"
 
+interface Project {
+  id: string
+  title: string
+  description: string
+  image: string
+  tags: string[]
+  author: {
+    name: string
+    avatar: string
+  }
+  createdAt: string
+  likes: number
+  comments: number
+  views: number
+}
+
 export function FeaturedProjects() {
-  const [projects, setProjects] = useState<any[]>([])
+  const [projects, setProjects] = useState<Project[]>([])
 
   useEffect(() => {
     // Load projects from storage and get the most liked ones

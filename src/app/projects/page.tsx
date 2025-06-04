@@ -11,6 +11,26 @@ import { AuthModal } from "@/components/auth/auth-modal"
 import { AddProjectModal } from "@/components/projects/add-project-modal"
 import toast from "react-hot-toast"
 
+interface Project {
+  id: string
+  title: string
+  description: string
+  image: string
+  tags: string[]
+  githubUrl?: string
+  liveUrl?: string
+  authorId: string
+  author: {
+    name: string
+    avatar: string
+  }
+  createdAt: string
+  likes: number
+  comments: number
+  views: number
+  isLiked: boolean
+}
+
 const popularTags = [
   "React", "TypeScript", "Node.js", "Python", "Vue.js", "Angular",
   "Next.js", "Django", "Express", "MongoDB"
@@ -18,8 +38,8 @@ const popularTags = [
 
 export default function ProjectsPage() {
   const { user } = useAuth()
-  const [projects, setProjects] = useState<any[]>([])
-  const [filteredProjects, setFilteredProjects] = useState<any[]>([])
+  const [projects, setProjects] = useState<Project[]>([])
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([])
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedTag, setSelectedTag] = useState("")
   const [showAuthModal, setShowAuthModal] = useState(false)
@@ -84,7 +104,7 @@ export default function ProjectsPage() {
       projectStorage.like(projectId, user.id)
       refreshProjects()
       toast.success('Project liked!')
-    } catch (error) {
+    } catch {
       toast.error('Failed to like project')
     }
   }
