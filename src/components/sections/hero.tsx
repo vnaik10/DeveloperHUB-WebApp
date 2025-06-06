@@ -48,7 +48,7 @@ export function Hero() {
 
           {/* Description */}
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            DeveloperHUB is the ultimate platform for developers to showcase their projects,
+            Abhishek is the ultimate platform for developers to showcase their projects,
             discover amazing work from peers, and build meaningful connections in the coding community.
           </p>
 
